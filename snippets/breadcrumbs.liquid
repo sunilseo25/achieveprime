@@ -1,0 +1,97 @@
+{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+
+<style>
+  .breadcrumbs-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px 40px;   
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: inherit;
+    color: #555;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+  
+  .breadcrumbs-wrapper a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s;
+  }
+
+  .breadcrumbs-wrapper a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+
+  .breadcrumbs-separator {
+    margin: 0 6px;
+    color: #999;
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumbs-wrapper {
+      padding: 10px 20px;
+      font-size: 11px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+</style>
+
+<nav class="breadcrumb breadcrumbs-wrapper" role="navigation" aria-label="breadcrumbs">
+  
+  {%- if template contains 'product' -%}
+    
+    <a href="/collections/alle-produkte">Alle Produkte</a>
+
+    {%- assign parent_collection = nil -%}
+    {%- for col in product.collections -%}
+      {%- if col.handle == 'oberteile' or col.handle == 'unterteile' or col.handle == 'jumpsuits' -%}
+        {%- assign parent_collection = col -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if parent_collection -%}
+      <span class="breadcrumbs-separator">/</span>
+      {{ parent_collection.title | link_to: parent_collection.url }}
+    {%- endif -%}
+
+    {%- assign child_collection = nil -%}
+    {%- assign sub_handles = "sport-bhs,tank-tops,tank-top,leggings,shorts,longsleeves,t-shirts,hoodies,crop-tops,crop-top,cycling" | split: "," -%}
+    
+    {%- for sub in sub_handles -%}
+      {%- for col in product.collections -%}
+        {%- if col.handle == sub -%}
+          {%- assign child_collection = col -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if child_collection -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if child_collection and child_collection.handle != parent_collection.handle -%}
+      <span class="breadcrumbs-separator">/</span>
+      {{ child_collection.title | link_to: child_collection.url }}
+    {%- endif -%}
+
+    {%- elsif template contains 'collection' -%}
+    <a href="/collections/alle-produkte">Alle Produkte</a>
+    {%- unless collection.handle == 'alle-produkte' -%}
+      <span class="breadcrumbs-separator">/</span>
+      <span>{{ collection.title }}</span>
+    {%- endunless -%}
+
+  {%- else -%}
+   <a href="/">Home</a>
+   <span class="breadcrumbs-separator">/</span>
+   <span>{{ page_title }}</span>
+  {%- endif -%}
+</nav>
+{%- endunless -%}
