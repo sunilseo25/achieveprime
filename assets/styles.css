@@ -341,31 +341,31 @@ td, th {
 } #cboxTopLeft {
   width: 25px;
   height: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border1.png?v=113436874971659238651766009761) no-repeat 0 0;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border1.png?v=113436874971659238651766056900) no-repeat 0 0;
 } #cboxTopCenter {
   height: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border1.png?v=113436874971659238651766009761) repeat-x 0 -50px;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border1.png?v=113436874971659238651766056900) repeat-x 0 -50px;
 } #cboxTopRight {
   width: 25px;
   height: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border1.png?v=113436874971659238651766009761) no-repeat -25px 0;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border1.png?v=113436874971659238651766056900) no-repeat -25px 0;
 } #cboxBottomLeft {
   width: 25px;
   height: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border1.png?v=113436874971659238651766009761) no-repeat 0 -25px;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border1.png?v=113436874971659238651766056900) no-repeat 0 -25px;
 } #cboxBottomCenter {
   height: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border1.png?v=113436874971659238651766009761) repeat-x 0 -75px;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border1.png?v=113436874971659238651766056900) repeat-x 0 -75px;
 } #cboxBottomRight {
   width: 25px;
   height: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border1.png?v=113436874971659238651766009761) no-repeat -25px -25px;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border1.png?v=113436874971659238651766056900) no-repeat -25px -25px;
 } #cboxMiddleLeft {
   width: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border2.png?v=142803151667698387151766009762) repeat-y 0 0;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border2.png?v=142803151667698387151766056900) repeat-y 0 0;
 } #cboxMiddleRight {
   width: 25px;
-  background: url(//www.achieveprime.com/cdn/shop/t/89/assets/cbox_border2.png?v=142803151667698387151766009762) repeat-y -25px 0;
+  background: url(//www.achieveprime.com/cdn/shop/t/90/assets/cbox_border2.png?v=142803151667698387151766056900) repeat-y -25px 0;
 } #cboxContent {
   background: #fff;
   overflow: hidden;
@@ -390,7 +390,7 @@ td, th {
   left: 100px;
   color: #999;
 } #cboxLoadingOverlay {
-  background: #fff url(//www.achieveprime.com/cdn/shop/t/89/assets/loading.gif?v=115678512110750922101766009764) no-repeat center 50px;
+  background: #fff url(//www.achieveprime.com/cdn/shop/t/90/assets/loading.gif?v=115678512110750922101766056900) no-repeat center 50px;
 } #cboxClose, #cboxNext, #cboxPrevious, #cboxSlideshow {
   border: 0;
   padding: 0;
@@ -3708,7 +3708,7 @@ body.cc-popup-no-scroll {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url(//www.achieveprime.com/cdn/shop/t/89/assets/loading.gif?v=115678512110750922101766009764) center center no-repeat;
+  background: #fff url(//www.achieveprime.com/cdn/shop/t/90/assets/loading.gif?v=115678512110750922101766056900) center center no-repeat;
 }
 
 /* Arrows */

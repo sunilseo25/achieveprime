@@ -17,9 +17,19 @@
       {% assign initial = false %}
     {% endif %}
     {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-    <img class="rimage__image lazyload{% if manual_image_load %}--manual{% endif %} fade-in {% if cover %}cover{% endif %}"
-      data-src="{{ img_url }}"
-      data-widths="[460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+    <img class="rimage__image lazyloaded{% if manual_image_load %}--manual{% endif %} fade-in {% if cover %}cover{% endif %}"
+      src="{{ image | image_url: width: 100 }}" data-li="st" d-src="{{ image | image_url: width: 800 }}"
+      dt="
+        {{ image | image_url: width: 460 }} 460w,
+        {{ image | image_url: width: 540 }} 540w,
+        {{ image | image_url: width: 720 }} 720w,
+        {{ image | image_url: width: 900 }} 900w,
+        {{ image | image_url: width: 1080 }} 1080w,
+        {{ image | image_url: width: 1296 }} 1296w,
+        {{ image | image_url: width: 1512 }} 1512w,
+        {{ image | image_url: width: 1728 }} 1728w,
+        {{ image | image_url: width: 2048 }} 2048w
+      "
       data-aspectratio="{{ image.aspect_ratio }}"
       data-sizes="auto"
       alt="{{ image.alt | escape }}"

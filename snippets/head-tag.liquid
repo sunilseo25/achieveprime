@@ -17,7 +17,7 @@
   assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic'
 -%}
 
-{%- unless base_font.system? -%}
+{% comment %} {%- unless base_font.system? -%}
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
 {%- endunless -%}
 
@@ -31,7 +31,7 @@
 
 {%- unless logo_font.system? -%}
   <link rel="preload" as="font" href="{{ logo_font | font_url }}" type="font/woff2" crossorigin>
-{%- endunless -%}
+{%- endunless -%} {% endcomment %}
 
 <link rel="preload" href="{{ 'vendor.min.js' | asset_url }}" as="script">
 <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
