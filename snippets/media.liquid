@@ -10,12 +10,22 @@
       <div class="rimage-wrapper lazyload--placeholder"
            style="padding-top:{{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 | minus: 0.1 | round: 1 }}%">
         {% assign img_url = media.preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-        <img class="rimage__image lazyload--manual {% unless prevent_lazyload %}fade-in{% endunless %}"
+        <img class="rimage__image lazyloaded {% unless prevent_lazyload %}fade-in{% endunless %}"
              {% if prevent_lazyload %}
                src="{{ media.preview_image | img_url: '360x' }}"
              {% endif %}
-             data-src="{{ img_url }}"
-             data-widths="[460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+             {% unless prevent_lazyload %}src="{{ media.preview_image | img_url: '360x' }}" data-li="st" d-src="{{ media.preview_image | img_url: '360x' }}"{% endunless %}
+             {% if prevent_lazyload %}srcse{% else %}d{% endif %}t="
+              {{ media.preview_image | image_url: width: 460 }} 460w,
+              {{ media.preview_image | image_url: width: 540 }} 540w,
+              {{ media.preview_image | image_url: width: 720 }} 720w,
+              {{ media.preview_image | image_url: width: 900 }} 900w,
+              {{ media.preview_image | image_url: width: 1080 }} 1080w,
+              {{ media.preview_image | image_url: width: 1296 }} 1296w,
+              {{ media.preview_image | image_url: width: 1512 }} 1512w,
+              {{ media.preview_image | image_url: width: 1728 }} 1728w,
+              {{ media.preview_image | image_url: width: 2048 }} 2048w
+            "
              data-aspectratio="{{ media.preview_image.aspect_ratio }}"
              data-sizes="auto"
              height="{{ media.preview_image.height }}"

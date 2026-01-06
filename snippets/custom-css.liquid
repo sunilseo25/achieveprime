@@ -1,0 +1,41 @@
+<style>
+    html:not(.mainopt):not(.xh) body.template-index .swiper-container.product-list .swiper-slide .image-inner img{
+        opacity:0;
+    }
+    body.template-index .slideshow .slide .rimage-outer-wrapper {
+        opacity: 1 !important;
+        transition: none;
+        transform: none !important;
+    }
+    .slick-initialized .slick-slide {
+        display: block !important;
+    }
+    .template-collection .rimage-background.fade-in {
+        opacity: 1 !important 
+    }
+    html:not(.xh) .product-list .swiper-slide:nth-child(n+2) img,
+    html:not(.xh) .cc-popup-image img {
+        {% comment %} opacity: 0 !important  {% endcomment %}
+    }
+    {% comment %} html:not(.scld) .theme-gallery.product-slider .theme-viewport.swiper-container:not(.swiper-container-ios) .theme-images:has(.current-img) .theme-img:not(.current-img):not([aria-hidden]) {
+        display: none !important
+    }
+    html:not(.scld) .theme-gallery.product-slider .theme-viewport.swiper-container:not(.swiper-container-ios) .theme-images:has(.current-img) .theme-img.current-img:not([aria-hidden]) {
+        display: block !important
+    } {% endcomment %}
+    html:not(.xh) .product-area .product-area__media .theme-img[aria-hidden=false] {
+        animation: none !important;
+    }
+    html:not(.scld) .product-area .product-area__media .theme-img[aria-hidden=false] {
+        opacity: 1 !important;
+    }
+    @media (max-width: 767px){
+        html:not(.scld) .swiper-container.product-list:not(.swiper-container-ios) .swiper-slide {
+            margin-right: 10px;
+            width: 290px;
+        }
+    }
+.footer-button-xs { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 2; background-color: #fff; transition: transform .3s cubic-bezier(0,.14,.19,1); } .template-search .footer-button-xs, .template-collection .footer-button-xs { z-index: 100; } .cc-product-filter .cc-accordion, [data-section-type=accordion] .cc-accordion, .product-detail-accordion+.product-detail-accordion .cc-accordion, .under-cart__accordion+.under-cart__accordion .cc-accordion { border-top: none; } article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; } .cc-accordion-item { border-bottom: 1px solid #ddd; } .cc-accordion-item__title { display: block; position: relative; list-style: none; padding: 15px 30px 15px 0; cursor: pointer; } .cc-accordion-item__title { font-weight: 500; padding-top: 20px; padding-bottom: 20px; } body:not(.user-is-tabbing) .cc-accordion-item__title { outline: none; } .cc-accordion-item__title:before, .cc-accordion-item__title:after { content: ""; position: absolute; top: calc(50% - 1px); right: 0; width: 11px; height: 1px; background-color: currentColor; transition: .3s ease; transition-property: transform,opacity; } .cc-accordion-item__title:before { transform: rotate(-90deg); } .cc-accordion-item__title:after, .cc-accordion-item__title:before { height: 2px; } .cc-accordion-item__title:before, .cc-accordion-item__title:after { content: ""; position: absolute; top: calc(50% - 1px); right: 0; width: 11px; height: 1px; background-color: currentColor; transition: .3s ease; transition-property: transform,opacity; } .cc-accordion-item__title:after, .cc-accordion-item__title:before { height: 2px; } .cc-announcement { background-color: #e0b286; color: #222; position: relative; text-align: center; transition: max-height 1s,opacity .5s,visibility .5s; } #site-control.fixed .cc-announcement { overflow: hidden; max-height: 200px; } .cc-announcement a { display: block; color: inherit; text-decoration: none; transition: background .1s; } .cc-announcement .cc-announcement__inner { padding: .7em; } @media (min-width: 768px){ .cc-announcement { font-size: 15px; } .theme-filter-container .cc-product-filter-container:not(.pt-0) { padding-top: 30px; } .footer-button-xs { display: none; } .theme-filter-container .cc-product-filter-container .product-list-container.product-list-container--with-sidebar { margin-left: 50px; } .theme-filter-container .cc-product-filter.cc-product-filter--sticky-true { position: -webkit-sticky; position: sticky; top: var(--nav-height); overflow: auto; } .theme-filter-container .cc-product-filter { display: block; margin-top: 40px; flex: 0 0 170px; padding-top: 0!important; } .theme-filter-container .cc-product-filter #FacetsForm>.cc-accordion:first-child { margin-top: -20px; } } @media (min-width: 992px) { .theme-filter-container .cc-product-filter { flex-basis: 240px; } } dsa {}
+@charset "UTF-8";
+[data-swatch="camo"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/camo_128x128.png?v=4478954471568816685) }[data-swatch="dusty baby blue"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/dusty-baby-blue_128x128.png?v=12728674485992422670) }[data-swatch="rose blossom dusty baby blue"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/rose-blossom-dusty-baby-blue_128x128.png?v=5448870359069985491) }[data-swatch="black"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/black_128x128.png?v=2151128243845535500) }[data-swatch="white"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/white_128x128.png?v=5546045374357468564) }[data-swatch="frosty blue"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/frosty-blue_128x128.png?v=17246122855821224790) }[data-swatch="rose blossom"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/rose-blossom_128x128.png?v=9495164804571433144) }[data-swatch="henna red"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/henna-red_128x128.png?v=13300812029286884099) }[data-swatch="stardust"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/stardust_128x128.png?v=13100051996414256237) }[data-swatch="lalique"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/lalique_128x128.png?v=12851921838646621906) }[data-swatch="true blue"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/true-blue_128x128.png?v=8301189279563165966) }[data-swatch="scampi"] { --swatch-background-image: url(//www.achieveprime.com/cdn/shop/files/scampi_128x128.png?v=14291818241863505445) }
+</style>
